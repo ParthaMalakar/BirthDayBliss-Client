@@ -1,0 +1,44 @@
+[
+      {
+        "name": "Balloon Bonanza",
+        "image": "https://i.ibb.co/1Tdktsb/2271231-292654-P6-SJNY-544.jpg",
+        "price": "$199",
+        "description": "Elevate your party with a burst of color! Our Balloon Bonanza package includes a stunning array of helium balloons, perfect for decorating your event venue. Add a touch of whimsy to your celebration.",
+        "button": "Book Now"
+      },
+      {
+        "name": "Cake Delights",
+        "image": "https://i.ibb.co/R20J53f/caramel-cake-chocolate-nuts-decorations.jpg",
+        "price": "$249",
+        "description": "Make a wish and indulge in a delectable custom-made birthday cake. Choose from a variety of flavors and designs to suit your theme. It's not just a cake; it's a centerpiece of celebration.",
+        "button": "Order Now"
+      },
+      {
+        "name": "Party Entertainment",
+        "image": "https://i.ibb.co/MGzwx4v/10782656-19197190.jpg",
+        "price": "$349",
+        "description": "Keep your guests entertained with our Party Entertainment package! A professional magician will amaze and delight with mesmerizing tricks and illusions. It's a show that will leave everyone spellbound.",
+        "button": "Book Entertainment"
+      },
+      {
+        "name": "Photo Booth Fun",
+        "image": "https://i.ibb.co/YDmK9h7/5599485-56725.jpg",
+        "price": "$149",
+        "description": "Capture the memories with our Photo Booth Fun service. Your guests can snap silly or stylish photos with fun props and take home instant prints as souvenirs. It's a photo-worthy experience!",
+        "button": "Snap Memories"
+      },
+      {
+        "name": "Themed Decorations",
+        "image": "https://i.ibb.co/r02WZqp/7172050-3561202.jpg",
+        "price": "$299",
+        "description": "Transform your party space into a themed wonderland! Our Themed Decorations package includes customized decorations to match your chosen theme, from princesses to superheroes. Create an immersive atmosphere.",
+        "button": "Decorate Now"
+      },
+      {
+        "name": "Gourmet Catering",
+        "image": "https://i.ibb.co/BZMh2Bz/dinner-table-with-fried-meat-dishes-sauces.jpg",
+        "price": "Starting at $399",
+        "description": "Treat your guests to a culinary delight with our Gourmet Catering service. Our talented chefs will craft a mouthwatering menu tailored to your preferences. It's a feast that'll satisfy every palate.",
+        "button": "Feast Time"
+      }
+    ]
