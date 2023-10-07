@@ -3,9 +3,12 @@ import Navbar from "../shared/navbar/Navbar";
 
 const Root = () => {
     return (
-        <div className="max-w-6xl mx-auto">
+        <div>
             <Navbar></Navbar>
+            <div  className="max-w-6xl mx-auto">
             <Outlet></Outlet>
+            </div>
+            
         </div>
     );
 };
