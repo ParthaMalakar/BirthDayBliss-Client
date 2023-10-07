@@ -96,17 +96,35 @@ const Home = () => {
       </div>
       <div>
         <h2 className='text-center md:text-4xl font-bold mt-16'>Our Services</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-5">
           {
-            services.map((service,idx )=> <Service
+            services.map((service, idx) => <Service
               key={idx}
               services={service}
-              ></Service>
-              
-             
-           )
+            ></Service>
+
+
+            )
           }
+        </div>
+        <div className='bg-[#009CDB26]'>
+          <h2 className=' text-center text-4xl pt-7 mb-5 font-bold '>Trending Birthday Ideas</h2>
+          <div className='grid grid-cols-2 pl-4 '>
+
+            <div className='text-center font-bold text-lg'>
+              <img className='mb-4' src="https://cdn.media.amplience.net/i/partycity/idea-package-girls-birthday-ideas?fmt=auto&qlt=default&fmt.jp2.qlt=85&w=614&sm=aspect&aspect=16:9" alt="" />
+           <a href="">Girl's Birthday Ideas </a>
+            </div>
+            <div className='text-center font-bold text-lg'>
+              <img className='mb-4' src="https://cdn.media.amplience.net/i/partycity/idea-package-boys-birthday-ideas-spiderman?fmt=auto&qlt=default&fmt.jp2.qlt=85&w=614&sm=aspect&aspect=16:9" alt="" />
+              <a className='text-center font-bold' href="">Boy's Birthday Ideas </a>
+            </div>
+            
+          </div>
+          <div className='items-center text-center'>
+            <button className=' text-white bg-black px-7 py-3 mt-10 mb-5 '>View Kids Birthday Ideas</button></div>
+          
         </div>
       </div>
     </div>
