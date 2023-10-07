@@ -3,18 +3,18 @@ import Pic from '../../../src/assets/images.jpg';
 
 const Navbar = () => {
     const navLinks = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">Services</NavLink></li>
-        <li><NavLink to="/career">Gallery</NavLink></li>
-        <li><NavLink to="/career">Career</NavLink></li>
-        <li><NavLink to="/addict">Contact</NavLink></li>
-        <li><NavLink to="/addict">About Us</NavLink></li>
-        <li><NavLink to="/addict">Profile</NavLink></li>
+        <li><NavLink className="text-lg" to="/">Home</NavLink></li>
+        <li><NavLink className="text-lg" to="/about">Services</NavLink></li>
+        <li><NavLink className="text-lg" to="/career">Gallery</NavLink></li>
+        <li><NavLink className="text-lg" to="/career">Career</NavLink></li>
+        <li><NavLink className="text-lg" to="/addict">Contact</NavLink></li>
+        <li><NavLink className="text-lg" to="/addict">About Us</NavLink></li>
+        <li><NavLink className="text-lg" to="/addict">Profile</NavLink></li>
         
     </>
     return (
         <div>
-            <div className="navbar bg-base-100 bg-slate-300">
+            <div className="navbar bg-base-100 ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -24,8 +24,8 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <img className="h-[50px] rounded-lg" src={Pic} alt="" />
-                    <a className="btn btn-ghost normal-case text-xl pl-4">BirthdayBliss</a>
+                    
+                    <a className="btn btn-ghost normal-case text-3xl pl-4">BirthdayBliss</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -33,7 +33,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn btn-accent mr-5">Login</a>
+                    <a className="btn btn-accent text-lg">Login</a>
                 </div>
             </div>
         </div>
