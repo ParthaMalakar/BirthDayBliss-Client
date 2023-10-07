@@ -1,8 +1,12 @@
+import { useLoaderData } from 'react-router-dom';
 import Slider1 from '../../../src/assets/slider1.jpg';
 import Slider2 from '../../../src/assets/slider2.jpg';
 import Slider3 from '../../../src/assets/slider3.jpg';
 import Slider4 from '../../../src/assets/slider4.jpg';
+import Service from './Service';
 const Home = () => {
+  const services = useLoaderData();
+
   return (
     <div>
       <div className="carousel w-full lg:h-[550px] bg-[#E76F511A]">
@@ -10,10 +14,10 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row gap-20 p-4 lg:p-24">
             <div className="space-y-7 flex-1">
               <h2 className="text-2xl lg:text-6xl font-bold">
-              Thematic Magic
+                Thematic Magic
               </h2>
               <p>
-              Experience the enchantment with our Thematic Magic package. Immerse yourself in a world of wonder as we bring your chosen theme to life with captivating decor and entertainment.
+                Experience the enchantment with our Thematic Magic package. Immerse yourself in a world of wonder as we bring your chosen theme to life with captivating decor and entertainment.
               </p>
               <button className="btn bg-red-400 text-white">Purchase</button>
             </div>
@@ -26,15 +30,15 @@ const Home = () => {
             <a href="#slide2" className="btn btn-circle">❯</a>
           </div>
         </div>
-       
+
         <div id="slide2" className="carousel-item relative w-full">
           <div className="flex flex-col lg:flex-row gap-20 p-4 lg:p-24">
             <div className="space-y-7 flex-1">
               <h2 className="text-2xl lg:text-6xl font-bold">
-              Sweet Treats Galore
+                Sweet Treats Galore
               </h2>
               <p>
-              Indulge in a sugary paradise with our Sweet Treats Galore option. From candy buffets to chocolate fountains, satisfy your sweet tooth and create a dessert wonderland
+                Indulge in a sugary paradise with our Sweet Treats Galore option. From candy buffets to chocolate fountains, satisfy your sweet tooth and create a dessert wonderland
               </p>
               <button className="btn bg-red-400 text-white">Purchase</button>
             </div>
@@ -51,11 +55,11 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row gap-20 p-4 lg:p-24">
             <div className="space-y-7 flex-1">
               <h2 className="text-2xl lg:text-6xl font-bold">
-              Adventure Quest
-                
+                Adventure Quest
+
               </h2>
               <p>
-              Embark on an Adventure Quest like never before! Dive into thrilling scavenger hunts, treasure hunts, and interactive games that will keep your young explorers entertained
+                Embark on an Adventure Quest like never before! Dive into thrilling scavenger hunts, treasure hunts, and interactive games that will keep your young explorers entertained
               </p>
               <button className="btn bg-red-400 text-white">Purchase</button>
             </div>
@@ -72,11 +76,11 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row gap-20 p-4 lg:p-24">
             <div className="space-y-7 flex-1">
               <h2 className="text-2xl lg:text-6xl font-bold">
-              VIP Party Package
-  
+                VIP Party Package
+
               </h2>
               <p>
-              Roll out the red carpet with our VIP Party Package. Treat your guests like celebrities with exclusive perks, premium services, and a memorable party experience.
+                Roll out the red carpet with our VIP Party Package. Treat your guests like celebrities with exclusive perks, premium services, and a memorable party experience.
               </p>
               <button className="btn bg-red-400 text-white">Purchase</button>
             </div>
@@ -88,6 +92,21 @@ const Home = () => {
             <a href="#slide3" className="btn btn-circle">❮</a>
             <a href="#slide1" className="btn btn-circle">❯</a>
           </div>
+        </div>
+      </div>
+      <div>
+        <h2 className='text-center md:text-4xl font-bold mt-16'>Our Services</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {
+            services.map((service,idx )=> <Service
+              key={idx}
+              services={service}
+              ></Service>
+              
+             
+           )
+          }
         </div>
       </div>
     </div>

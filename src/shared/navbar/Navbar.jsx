@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import Pic from '../../../src/assets/images.jpg';
 
 const Navbar = () => {
     const navLinks = <>
