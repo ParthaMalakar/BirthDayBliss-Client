@@ -114,18 +114,74 @@ const Home = () => {
 
             <div className='text-center font-bold text-lg'>
               <img className='mb-4' src="https://cdn.media.amplience.net/i/partycity/idea-package-girls-birthday-ideas?fmt=auto&qlt=default&fmt.jp2.qlt=85&w=614&sm=aspect&aspect=16:9" alt="" />
-           <a href="">Girl's Birthday Ideas </a>
+              <a href="">Girl's Birthday Ideas </a>
             </div>
             <div className='text-center font-bold text-lg'>
               <img className='mb-4' src="https://cdn.media.amplience.net/i/partycity/idea-package-boys-birthday-ideas-spiderman?fmt=auto&qlt=default&fmt.jp2.qlt=85&w=614&sm=aspect&aspect=16:9" alt="" />
               <a className='text-center font-bold' href="">Boy's Birthday Ideas </a>
             </div>
-            
+
           </div>
           <div className='items-center text-center'>
             <button className=' text-white bg-black px-7 py-3 mt-10 mb-5 '>View Kids Birthday Ideas</button></div>
-          
+
         </div>
+      </div>
+      <div className='bg-[#009CDB26] mt-10'>
+      <h2 className=' text-center text-4xl pt-5 font-bold '>Book a Date</h2>
+<div>
+
+
+<div className="  hero min-h-screen ">
+  
+  <div className="hero-content flex-col lg:flex-row-reverse">
+    <div className="text-center lg:text-left">
+      <p className="py-6 text-5xl font-bold">It’s your day, make it worth remembering.</p>
+      <p>Book your birthday event with us for a hassle-free and unforgettable celebration! Our dedicated team of party planners and event experts is here to turn your special day into a magical experience. From creative themes and delicious catering to captivating entertainment and stunning decorations, we handle every detail, so you can focus on creating cherished memories with loved ones.</p>
+    </div>
+    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <form className="card-body">
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Name</span>
+          </label>
+          <input type="text" placeholder="Name" className="input input-bordered" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Phone</span>
+          </label>
+          <input type="text" placeholder="Phone Number" className="input input-bordered" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Email</span>
+          </label>
+          <input type="email" placeholder="Email" className="input input-bordered" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Date</span>
+          </label>
+          <input type="date" placeholder="Pick yor Date" className="input input-bordered" required />
+          <label className="label">
+            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+          </label>
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Message</span>
+          </label>
+          <input type="text" placeholder="Message" className="input input-bordered" required />
+        </div>
+        <div className="form-control mt-6">
+          <button className="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
       </div>
     </div>
   );
