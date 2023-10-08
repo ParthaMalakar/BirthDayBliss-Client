@@ -1,15 +1,29 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     const navLinks = <>
         <li><NavLink className="text-lg" to="/">Home</NavLink></li>
-        <li><NavLink className="text-lg" to="/career">Gallery</NavLink></li>
-        <li><NavLink className="text-lg" to="/career">Career</NavLink></li>
-        <li><NavLink className="text-lg" to="/addict">Contact</NavLink></li>
+        { !user && <>
+            <li><NavLink className="text-lg" to="/addict">Contact</NavLink></li>
         <li><NavLink className="text-lg" to="/addict">About Us</NavLink></li>
-        <li><NavLink className="text-lg" to="/addict">Profile</NavLink></li>
+        </>}
         
+        { user && <>
+            <li><NavLink className="text-lg" to="/career">Gallery</NavLink></li>
+        <li><NavLink className="text-lg" to="/career">Career</NavLink></li>
+        <li><NavLink className="text-lg" to="/addict">Profile</NavLink></li>
+        </>}
     </>
+    
+    console.log(user)
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
     return (
         <div>
             <div className="navbar bg-base-100 ">
@@ -22,18 +36,29 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    
+
                     <a className="btn btn-ghost normal-case text-3xl pl-4 navbar-start">BirthdayBliss</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                      {navLinks}
+                        {navLinks}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="/login" className="btn bg-red-400 text-white text-lg">Login</Link>
-                    
+                    { 
+                        user ?  <div className="flex items-center">
+                            <img className="w-[30px] h-7 rounded-full" src={user.photoURL} alt="" />
+                            <p>UserName:{user.displayName}</p>
+                            
+                            <button onClick={handleSignOut} className="btn">Sign Out</button>
+                        </div>
+
+                            :
+                            <Link to="/login" className="btn bg-red-400 text-white text-lg">Login</Link>
+
+                    }
                 </div>
+
             </div>
         </div>
     );

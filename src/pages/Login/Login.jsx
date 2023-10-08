@@ -12,6 +12,7 @@ const Login = () => {
     const { signInWithGoogle, signIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+
     console.log('location i n the login page', location)
     const handleSignInWithGoogle = () => {
         signInWithGoogle()
@@ -22,7 +23,7 @@ const Login = () => {
                     });
                 }
                
-                // navigate after login
+                
                 navigate(location?.state ? location.state : '/');
 
             })
@@ -50,6 +51,7 @@ const Login = () => {
                     position: toast.POSITION.TOP_CENTER,
                 });
                 // navigate after login
+                e.target.reset();
                 navigate(location?.state ? location.state : '/');
 
             })
