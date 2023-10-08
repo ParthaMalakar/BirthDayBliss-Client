@@ -7,12 +7,12 @@ const Navbar = () => {
     const navLinks = <>
         <li><NavLink className="text-lg" to="/">Home</NavLink></li>
         { !user && <>
-            <li><NavLink className="text-lg" to="/addict">Contact</NavLink></li>
-        <li><NavLink className="text-lg" to="/addict">About Us</NavLink></li>
+            <li><NavLink className="text-lg" to="/contact">Contact</NavLink></li>
+        <li><NavLink className="text-lg" to="/about">About Us</NavLink></li>
         </>}
         
         { user && <>
-            <li><NavLink className="text-lg" to="/career">Gallery</NavLink></li>
+            <li><NavLink className="text-lg" to="/Gallery">Gallery</NavLink></li>
         <li><NavLink className="text-lg" to="/career">Career</NavLink></li>
         <li><NavLink className="text-lg" to="/profile">Profile</NavLink></li>
         </>}

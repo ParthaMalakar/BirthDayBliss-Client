@@ -8,6 +8,8 @@ import PrivateRoute from "./privateRoute";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Profile from "../pages/Profile/Profile";
+import Career from "../pages/Career/Career";
+import AboutUs from "../pages/AboutUs/AboutUs";
 
 const router = createBrowserRouter([
     {
@@ -31,8 +33,23 @@ const router = createBrowserRouter([
                
             },
             {
+                path: '/about',
+                element: <AboutUs></AboutUs>, 
+               
+            },
+            {
+                path: '/contact',
+                element: <AboutUs></AboutUs>, 
+               
+            },
+            {
                 path: '/profile',
-                element: <Profile></Profile>, 
+                element:<PrivateRoute><Profile></Profile></PrivateRoute>, 
+               
+            },
+            {
+                path: '/career',
+                element:<PrivateRoute><Career></Career></PrivateRoute>, 
                
             },
             {
