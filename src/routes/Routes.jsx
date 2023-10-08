@@ -7,6 +7,7 @@ import Registration from "../pages/Registration/Registration";
 import PrivateRoute from "./privateRoute";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Profile from "../pages/Profile/Profile";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Registration></Registration>, 
+               
+            },
+            {
+                path: '/profile',
+                element: <Profile></Profile>, 
                
             },
             {
