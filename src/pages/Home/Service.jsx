@@ -14,7 +14,7 @@ const Service = ({ services }) => {
                     <p>{description}</p>
                     <p>Price:{price}</p>
                     <div className="card-actions ">
-                        <Link to={`/services/${id}`}><button className="btn btn-primary flex-grow">{button}</button></Link>
+                        <Link to={`/services/${id}`}><button className="btn btn-primary flex-grow">View Detail</button></Link>
                     </div>
                 </div>
             </div>
