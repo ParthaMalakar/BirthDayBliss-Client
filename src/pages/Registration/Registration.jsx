@@ -1,9 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
     const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+
     const handleRegistration = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
@@ -18,9 +22,16 @@ const Registration = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
+                toast.success(`Registration Successfully complete`, {
+                    position: toast.POSITION.TOP_CENTER,
+                  });
+                navigate('/login');
             })
             .catch(error => {
                 console.error(error)
+                toast.error(`${error.message}`, {
+                    position: toast.POSITION.TOP_CENTER,
+                });
             })
         }
     return (
@@ -57,8 +68,10 @@ const Registration = () => {
                         <button className="btn bg-red-400 text-white font-bold">Register</button>
                     </div>
                 </form>
+                <ToastContainer></ToastContainer>
                 <p className="text-center mt-4 font-bold text-lg pb-6 mb-7 ">Already have an account? <Link className="text-blue-600 font-bold" to="/login">Login</Link></p>
             </div>
+            
         </div>
     );
 };
