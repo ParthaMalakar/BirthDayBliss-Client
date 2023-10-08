@@ -37,7 +37,7 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <a className="btn btn-ghost normal-case text-3xl pl-4 navbar-start">BirthdayBliss</a>
+                    <a className="btn btn-ghost normal-case text-base md:text-3xl pl-4 navbar-start">BirthdayBliss</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -46,11 +46,11 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     { 
-                        user ?  <div className="flex items-center">
-                            <img className="w-[30px] h-7 rounded-full" src={user.photoURL} alt="" />
+                        user ?  <div className=" md:flex items-center ">
+                            <img className="ml-28 md:ml-0 md:w-[30px] h-11 md:h-7 rounded-full" src={user.photoURL} alt="" />
                             <p>UserName:{user.displayName}</p>
                             
-                            <button onClick={handleSignOut} className="btn">Sign Out</button>
+                            <button onClick={handleSignOut} className="btn ml-20 md:ml-0">Sign Out</button>
                         </div>
 
                             :

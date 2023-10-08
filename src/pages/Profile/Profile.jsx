@@ -9,9 +9,9 @@ const Profile = () => {
             <Navbar></Navbar>
             <div className="max-w-7xl ">
             
-            <div className="card mx-auto w-[800px] h-[600px] mt-16 bg-base-100 shadow-xl">
+            <div className="card mx-auto md:w-[800px] md:h-[600px] mt-16 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <img src={user.photoURL} alt="Shoes" className="rounded-xl h-[400px] w-[450px]" />
+                    <img src={user.photoURL} alt="Shoes" className="rounded-xl md:h-[400px] md:w-[450px]" />
                 </figure>
                 <div className="card-body items-center text-center">
 
