@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 
 const Service = ({ services }) => {
-    const { name, image, price, description, button } = services;
-
+    const { id,name, image, price, description, button } = services;
     return (
         <div>
             <div className="flex">
@@ -14,7 +14,7 @@ const Service = ({ services }) => {
                     <p>{description}</p>
                     <p>Price:{price}</p>
                     <div className="card-actions ">
-                        <button className="btn btn-primary flex-grow">{button}</button>
+                        <Link to={`/services/${id}`}><button className="btn btn-primary flex-grow">{button}</button></Link>
                     </div>
                 </div>
             </div>
