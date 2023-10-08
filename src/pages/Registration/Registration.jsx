@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
@@ -7,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const Registration = () => {
     const { createUser } = useContext(AuthContext);
     const navigate = useNavigate();
+    
+
 
     const handleRegistration = e => {
         e.preventDefault();
@@ -18,7 +20,24 @@ const Registration = () => {
         const password = form.get('password');
         console.log(name, photo, email, password);
 
-        
+        if (password.length < 6) {
+            toast.error(`Password should be at least 6 characters or longer`, {
+                position: toast.POSITION.TOP_CENTER,
+            });
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            toast.error(`Your password should have at least one upper case characters`, {
+                position: toast.POSITION.TOP_CENTER,
+            });
+            return;
+        }
+        else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
+            toast.error(`Password must contain at least one special characters`, {
+                position: toast.POSITION.TOP_CENTER,
+            });
+            return;
+        }
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
