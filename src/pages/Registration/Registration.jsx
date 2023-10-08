@@ -54,7 +54,7 @@ const Registration = () => {
                     position: toast.POSITION.TOP_CENTER,
                   });
                   e.target.reset();
-                  navigate(location?.state ? location.state : '/');
+                  navigate(location?.state ? location.state : '/login');
                   
                             })
             .catch(error => {

@@ -10,6 +10,8 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Profile from "../pages/Profile/Profile";
 import Career from "../pages/Career/Career";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import Contact from "../pages/Contact/Contact";
+import Gallery from "../pages/Gallery/Gallery";
 
 const router = createBrowserRouter([
     {
@@ -39,7 +41,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <AboutUs></AboutUs>, 
+                element: <Contact></Contact>, 
+               
+            },
+            {
+                path: '/Gallery',
+                element:<PrivateRoute><Gallery></Gallery></PrivateRoute>, 
                
             },
             {

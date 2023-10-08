@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Navbar from "../../shared/navbar/Navbar";
 
 const Profile = () => {
     const { user} = useContext(AuthContext);
     return (
         <div>
+            <Navbar></Navbar>
             <div className="max-w-7xl ">
             
             <div className="card mx-auto w-[800px] h-[600px] mt-16 bg-base-100 shadow-xl">

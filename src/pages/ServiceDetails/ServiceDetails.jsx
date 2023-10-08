@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Navbar from "../../shared/navbar/Navbar";
 
 const ServiceDetails = () => {
     const services = useLoaderData();
@@ -6,6 +7,7 @@ const ServiceDetails = () => {
     const service = services.find(service => service.id == id);
     return (
         <div>
+            <Navbar></Navbar>
             <div className="max-w-7xl ">
             
             <div className="card mx-auto w-[800px] h-[600px] mt-16 bg-base-100 shadow-xl">

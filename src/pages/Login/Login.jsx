@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from "../../shared/navbar/Navbar";
 
 const Login = () => {
 
@@ -63,7 +64,7 @@ const Login = () => {
     }
     return (
         <div>
-           
+           <Navbar></Navbar> 
 
             <div className="pt-8 bg-[#009CDB26]">
                 <h2 className="text-3xl my-10 text-center pt-10 font-bold">Please Login</h2>

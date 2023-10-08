@@ -1,7 +1,9 @@
+import Navbar from "../../shared/navbar/Navbar";
 
 const Career = () => {
     return (
         <div>
+            <Navbar></Navbar> 
            <div className="container mx-auto py-8 bg-[#009CDB26] mb-8 mt-3">
       <h1 className="text-3xl font-semibold mt-4 mb-4 pt-8 text-center">Join Our Team</h1>
       <p className="text-gray-600 mb-8 text-center">

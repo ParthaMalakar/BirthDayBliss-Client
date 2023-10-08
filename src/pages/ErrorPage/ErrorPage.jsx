@@ -7,7 +7,9 @@ const ErrorPage = () => {
                 <p>Some Things went worng</p>
                 <p>Check the internet connection and Route</p>
             </div>
+            
         </div>
+    
     );
 };
 

@@ -4,11 +4,13 @@ import Slider2 from '../../../src/assets/slider2.jpg';
 import Slider3 from '../../../src/assets/slider3.jpg';
 import Slider4 from '../../../src/assets/slider4.jpg';
 import Service from './Service';
+import Navbar from '../../shared/navbar/Navbar';
 const Home = () => {
   const services = useLoaderData();
 
   return (
     <div>
+      <Navbar></Navbar> 
       <div className=" carousel w-full lg:h-[550px] bg-[#E76F511A]">
         <div id="slide1" className="carousel-item relative w-full">
           <div className="flex flex-col lg:flex-row gap-20 p-4 lg:p-24">
