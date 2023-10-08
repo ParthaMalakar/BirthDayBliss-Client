@@ -6,11 +6,24 @@ import { AuthContext } from "../../providers/AuthProvider";
 const Login = () => {
 
 
-    const { signIn } = useContext(AuthContext);
+    const { signInWithGoogle,signIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     console.log('location i n the login page', location)
+    const handleSignInWithGoogle =()=>{
+        signInWithGoogle()
+        .then(result => {
+            console.log(result.user);
 
+            // navigate after login
+            navigate(location?.state ? location.state : '/');
+
+        })
+        .catch(error => {
+            console.error(error);
+        })
+
+    }
     const handleLogin = e => {
         e.preventDefault();
         console.log(e.currentTarget);
@@ -56,7 +69,7 @@ const Login = () => {
                 <hr className="text-black w-[300px] mx-auto border-t-3 border-orange-500"></hr>
                 <p className="text-center font-bold pb-3 ">Or</p>
                 <div className="justify-center items-center text-center pb-7 mb-9">
-                <button className=" text-black btn btn-secondary bg-[#FFF]"> <FcGoogle className="text-2xl"></FcGoogle> Continue with Google</button>
+                <button onClick={handleSignInWithGoogle} className=" text-black btn btn-secondary bg-[#FFF]"> <FcGoogle className="text-2xl"></FcGoogle> Continue with Google</button>
 
                 </div>
             </div> 
