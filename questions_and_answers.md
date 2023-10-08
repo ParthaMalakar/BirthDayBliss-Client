@@ -18,9 +18,11 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B: `ReferenceError: greetign is not defined`
+   
 
-<i>Write your explanation here</i>
+
+<i> Description:Declared the variable as "greeting" but then tried to access it as "greetign." Because of this , the variable "greetign" is not defined, and  will encounter a ReferenceError when trying to access it.</i>
 
 </p>
 </details>
@@ -43,9 +45,10 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: `"12"`
 
-<i>Write your explanation here</i>
+
+<i>Description:The output will be the string "12" because concatenate the numeric value `1` with the string `"2"` when the `+` operator is used with different types.For that 1 convert to string and concatenate with 2.so the answer is 12.</i>
 
 </p>
 </details>
@@ -69,9 +72,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: `['🍕', '🍫', '🥑', '🍔']`
 
-<i>Write your explanation here</i>
+<i>The food array remains unchanged throughout the code, so it still contains the original elements: "🍕", "🍫", "🥑", "🍔". The reassignment of info.favoriteFood to "🍝" does not affect the food array.Changing the value of a property within an object does not affect the original array. Therefore, when we log food, it will still contain the same elements as initially defined.</i>
 
 </p>
 </details>
@@ -94,9 +97,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B: `Hi there, undefined`
 
-<i>Write your explanation here</i>
+<i>sayHi function expects an argument name, but when we call it with sayHi(), we don't provide any arguments. In JavaScript, when a function is called with missing arguments, the missing parameters are assigned the value undefined. So, the function returns "Hi there, undefined" in this case.</i>
 
 </p>
 </details>
@@ -122,9 +125,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: 3
 
-<i>Write your explanation here</i>
+<i>nums array using the forEach method and counting the non-falsy values in the array. The numbers 1, 2, and 3 are non-falsy values, so the count variable is incremented three times, resulting in a final value of 3.</i>
 
 </p>
 </details>
