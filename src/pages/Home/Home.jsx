@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="carousel w-full lg:h-[550px] bg-[#E76F511A]">
+      <div className=" carousel w-full lg:h-[550px] bg-[#E76F511A]">
         <div id="slide1" className="carousel-item relative w-full">
           <div className="flex flex-col lg:flex-row gap-20 p-4 lg:p-24">
             <div className="space-y-7 flex-1">
