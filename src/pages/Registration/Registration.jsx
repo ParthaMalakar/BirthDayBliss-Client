@@ -47,6 +47,7 @@ const Registration = () => {
                     photoURL: photo , 
                   }).then(() => {
                     console.log("User profile updated");
+                    window.location.reload(true)
                   }).catch((error) => {
                     console.error("Error updating profile:", error);
                   });
@@ -54,7 +55,7 @@ const Registration = () => {
                     position: toast.POSITION.TOP_CENTER,
                   });
                   e.target.reset();
-                  navigate(location?.state ? location.state : '/login');
+                  navigate(location?.state ? location.state : '/');
                   
                             })
             .catch(error => {

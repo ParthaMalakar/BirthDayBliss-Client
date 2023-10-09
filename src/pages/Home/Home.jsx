@@ -5,13 +5,19 @@ import Slider3 from '../../../src/assets/slider3.jpg';
 import Slider4 from '../../../src/assets/slider4.jpg';
 import Service from './Service';
 import Navbar from '../../shared/navbar/Navbar';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init({
+  duration: 1000, 
+  once: true,    
+});
 const Home = () => {
   const services = useLoaderData();
 
   return (
     <div>
       <Navbar></Navbar> 
-      <div className=" carousel w-full lg:h-[550px] bg-[#E76F511A]">
+      <div data-aos="zoom-in" className=" carousel w-full lg:h-[550px] bg-[#E76F511A]">
         <div id="slide1" className="carousel-item relative w-full">
           <div className="flex flex-col lg:flex-row lg:gap-20 p-4 lg:p-24">
             <div className="space-y-7 flex-1">
@@ -97,9 +103,9 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <h2 className='text-center text-2xl md:text-4xl font-bold mt-4 md:mt-16'>Our Services</h2>
+        <h2 data-aos="fade-up" className='text-center text-2xl md:text-4xl font-bold mt-4 md:mt-16'>Our Services</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-5">
+        <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-5">
           {
             services.map((service, idx) => <Service
               key={idx}
@@ -110,7 +116,7 @@ const Home = () => {
             )
           }
         </div>
-        <div className='bg-[#009CDB26]'>
+        <div data-aos="flip-left" className='bg-[#009CDB26]'>
           <h2 className=' text-center text-4xl pt-7 mb-5 font-bold '>Trending Birthday Ideas</h2>
           <div className='grid grid-cols-2 pl-4 '>
 
@@ -129,7 +135,8 @@ const Home = () => {
 
         </div>
       </div>
-      <div className='bg-[#009CDB26] mt-10'>
+      <div data-aos="fade-up"
+     data-aos-duration="3000" className='bg-[#009CDB26] mt-10'>
       <h2 className=' text-center text-4xl pt-5 font-bold '>Book a Date</h2>
 <div>
 
