@@ -19,7 +19,7 @@ const Login = () => {
         signInWithGoogle()
             .then(result => {
                 if(result.user){
-                    toast.success(`Registration Successfully complete`, {
+                    toast.success(`Login Successfull`, {
                         position: toast.POSITION.TOP_CENTER,
                     });
                 }
